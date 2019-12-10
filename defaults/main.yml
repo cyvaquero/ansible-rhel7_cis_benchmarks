@@ -20,6 +20,10 @@ fail_on_manual_remediation_actions: false  # True or false.
 # Check specific values which can be overridden
 ###############################################
 
+# 1.2.5
+cis_rhnsd_exception:
+cis_rhnsd_state: stopped
+
 # 1.3.1
 cis_aide_database_filename: "/var/lib/aide/aide.db.gz"
 cis_aide_src_database_filename: "/var/lib/aide/aide.db.new.gz"
@@ -255,7 +259,7 @@ cis_hosts_allow_all_ips:
 cis_firewalld_install: { package: firewalld, state: present, service: firewalld, rstate: started, enabled: true, exception: 123 }
 
 # 4.1
-## Configuration for the auditd.conf 
+## Configuration for the auditd.conf
 # 4.1.1.1
 # Max log file in MB
 cis_max_log_file: 8
@@ -289,7 +293,7 @@ cis_admin_space_left: 50
 cis_disk_full_action: SUSPEND
 cis_disk_error_action: SUSPEND
 cis_use_libwrap: "yes"
-##cis_tcp_listen_port:  
+##cis_tcp_listen_port:
 cis_tcp_listen_queue: 5
 cis_tcp_max_per_addr: 1
 ##cis_tcp_client_ports: 1024-65535

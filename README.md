@@ -112,9 +112,10 @@ ansible-playbook playbook.yml -t scored
 Limitations
 -----------
 
-At present, only the Level 1 items of the benchmark are implemented. Level 2 items will be added as time permits.
+At present, only the Level 1 items of the benchmark are implemented. Level 2 items are added as time permits.
 
 The following checks have not been implemented:
+* 1.2.4. RHN/Subscription Manager is environment specific.
 * 1.1.18. Removable devices are environment specific.
 * 1.1.19. Removable devices are environment specific.
 * 1.1.20. Removable devices are environment specific.
