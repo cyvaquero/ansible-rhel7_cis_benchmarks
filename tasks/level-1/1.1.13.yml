@@ -1,9 +1,9 @@
 # Standards: 2.2.0
 ---
 
-# 1.1.14 - Ensure nodev option set on /home partition
+# 1.1.13 - Ensure separate partition exists for /home
 
-- name: 1.1.14 - Ensure nodev option set on /home partition
+- name: 1.1.13 - Ensure separate partition exists for /home
   mount:
     name: "{{ item.mount }}"
     state: mounted
@@ -15,5 +15,5 @@
   tags:
     - level-1
     - section-1
-    - "1.1.14"
+    - "1.1.13"
     - scored
