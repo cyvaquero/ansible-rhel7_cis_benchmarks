@@ -11,7 +11,6 @@
   tags:
     - level-1
     - "1.2.2"
-    - "1.2.2a"
     - scored
 
 - name: 1.2.2 - Verify that gpgcheck is enabled for all repositories in /etc/yum.repos.d
@@ -24,5 +23,4 @@
   tags:
     - level-1
     - "1.2.2"
-    - "1.2.2b"
     - scored

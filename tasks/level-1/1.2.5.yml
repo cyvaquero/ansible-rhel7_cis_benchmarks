@@ -1,0 +1,28 @@
+# Standards: 2.2.0
+---
+
+# 1.2.5 Disable the rhnsd Daemon
+
+- name: 1.2.5 - Ensure CUPS is {{ cis_cups_install.state }}, exception {{ cis_cups_install.exception }}
+  yum:
+    name: "{{ item.package }}"
+    state: "{{ item.state }}"
+  with_items:
+    - "{{ cis_cups_install }}"
+  tags:
+    - level-2
+    - "1.2.5"
+    - not-scored
+
+- name: 1.2.5 - Ensure CUPS is {{ cis_cups_install.state }}, exception {{ cis_cups_install.exception }}
+  service:
+    name: "{{ item.service }}"
+    enabled: "{{ item.enabled }}"
+    state: "{{ item.rstate }}"
+  with_items:
+    - "{{ cis_cups_install }}"
+  when: cis_cups_install.state == "present"
+  tags:
+    - level-2
+    - "1.2.5"
+    - not-scored
