@@ -1,7 +1,7 @@
 # Standards: 2.2.0
 ---
 
-# 1.2.5 Disable the rhnsd Daemon
+# 1.2.5 - Disable the rhnsd Daemon
 
 - name: 1.2.5 - Ensure CUPS is {{ cis_cups_install.state }}, exception {{ cis_cups_install.exception }}
   yum:

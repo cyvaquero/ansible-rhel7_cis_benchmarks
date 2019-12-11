@@ -1,7 +1,7 @@
 # Standards: 2.2.0
 ---
 
-# 1.2.3 Ensure GPG keys are configured
+# 1.2.3 - Ensure GPG keys are configured
 
 # The remediation actions for this recommendation are site-specific, therefore we test that
 # executing the specified rpm command results in no errors.
