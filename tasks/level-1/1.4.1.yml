@@ -1,7 +1,7 @@
 # Standards: 2.2.0
 ---
 
-# 1.4.1 Ensure permissions on bootloader config are configured
+# 1.4.1 - Ensure permissions on bootloader config are configured
 
 - name: 1.4.1 - Check if grub bootloader file exists
   stat:
