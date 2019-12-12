@@ -1,0 +1,13 @@
+# Standards: 2.2.0
+---
+
+# 1.6.1.4 - Ensure SETroubleshoot is not installed
+- name: 1.6.1.4 - Ensure SETroubleshoot is not installed
+  debug:
+    msg: "WARNING - This check has not been implemented yet."
+  tags:
+    - level-2
+    - section-1
+    - "1.6.1.4"
+    - scored
+    - todo

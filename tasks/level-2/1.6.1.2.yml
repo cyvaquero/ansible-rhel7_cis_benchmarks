@@ -1,0 +1,13 @@
+# Standards: 2.2.0
+---
+
+# 1.6.1.2 - Ensure the SELinux state is enforcing
+- name: 1.6.1.2 - Ensure the SELinux state is enforcing
+  debug:
+    msg: "WARNING - This check has not been implemented yet."
+  tags:
+    - level-2
+    - section-1
+    - "1.6.1.2"
+    - scored
+    - todo
