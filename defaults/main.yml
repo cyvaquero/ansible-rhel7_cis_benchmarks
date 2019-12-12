@@ -37,6 +37,8 @@ cis_aide_cron_dow: "*" # Day of week
 cis_aide_cron_dom: "*" # Day of month
 cis_aide_cron_month: "*"
 
+# 1.7.1.1
+cis_motd: ""
 # 1.7.1.2
 cis_local_login_warning_banner: "Authorized uses only. All activity may be monitored and reported.\n"
 # 1.7.1.3
