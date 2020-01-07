@@ -1,49 +1,42 @@
-# Standards: 0.11
+# Standards: 2.2.0
 ---
 
-# 2.1.6 Check rsh-server installation should be absent, else show exception {{ cis_rservices_install.rshserver_exception }}
+# 2.1.6 Ensure tftp server is not enabled
 
-- name: 2.1.6 - Ensure rsh server is {{ cis_rservices_install.state }}
+- name: 2.1.6 - Ensure tftp server is {{ cis_tftp_install.state }}
   yum:
     name: "{{ item.package }}"
     state: "{{ item.state }}"
   with_items:
-    - "{{ cis_rservices_install }}"
+    - "{{ cis_tftp_install }}"
   tags:
     - level-1
     - section-2
     - "2.1.6"
     - scored
 
-- name: 2.1.6 - If rsh server is installed start appropriate services
+- name: 2.1.6 - If tftp server is installed set appropriate service - {{ cis_tftp_install.exception }}
   service:
     name: "{{ item.service }}"
     enabled: "{{ item.enabled }}"
-    state: "{{ item.state }}"
-  when: cis_rservices_install.state == 'present'
+    state: "{{ item.rstate }}"
+  when: cis_tftp_install.state == 'present'
   with_items:
-    - "{{ cis_rservice_rexec }}"
-    - "{{ cis_rservice_rlogin }}"
-    - "{{ cis_rservice_rsh }}"
+    - "{{ cis_tftp_install }}"
   tags:
     - level-1
     - section-2
     - "2.1.6"
     - scored
 
-
-#- name: 2.1.6 - Ensure rsh server is not enabled
-#  service:
-#    name: "{{ item }}"
-#    enabled: false
-#    state: stopped
-#  with_items:
-#    - rexec
-#    - rlogin
-#    - rsh
-#  ignore_errors: true
-#  tags:
-#    - level-1
-#    - section-2
-#    - "2.1.6"
-#    - scored
+- name: 2.1.6 - Install tftp client if required - {{ cis_tftp_install.client_state }}
+  yum:
+    name: "{{ item.client }}"
+    state: "{{ item.client_state }}"
+  with_items:
+    - "{{ cis_tftp_install }}"
+  tags:
+    - level-1
+    - section-2
+    - "2.1.6"
+    - scored
