@@ -1,7 +1,7 @@
 # Standards: 2.2.0
 ---
 
-# 2.2.21 Ensure rsync server is not enabled
+# 2.2.21 Ensure rsync service is not enabled
 
 - name: 2.2.21 - Ensure rsync server is {{ cis_rsync_install.state }}
   yum:

@@ -1,7 +1,7 @@
-# Standards: 0.11
+# Standards: 2.2.0
 ---
 
-# 2.2.16 Ensure NIS services is not enabled
+# 2.2.16 Ensure NIS Server is not enabled
 
 - name: 2.2.16 - Ensure NIS services is {{ cis_nis_install.state }} exception {{ cis_nis_install.exception }}
   yum:

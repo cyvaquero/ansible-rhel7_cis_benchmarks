@@ -1,7 +1,7 @@
-# Standards: 0.11
+# Standards: 2.2.0
 ---
 
-# 2.2.12 Ensure SMB services is not enabled
+# 2.2.12 Ensure Samba is not enabled
 
 - name: 2.2.12 - Ensure SMB services are {{ cis_smb_install.state }} with exception {{ cis_smb_install.exception }}
   yum:
