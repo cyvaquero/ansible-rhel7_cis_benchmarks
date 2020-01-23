@@ -27,5 +27,7 @@
 # Note merged 4.1.4 - 4.1.17 merged into 4.1.n for now
 - include: "level-2/4.1.n.yml"
   when: "'4.1.n' not in cis_level_2_exclusions"
+- include: "level-2/5.4.5.yml"
+  when: "'5.4.5' not in cis_level_2_exclusions"
 - include: "level-2/6.1.1.yml"
   when: "'6.1.1' not in cis_level_2_exclusions"
