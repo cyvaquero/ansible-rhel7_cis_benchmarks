@@ -310,7 +310,8 @@ cis_tcp_listen_port: blank
 cis_tcp_client_ports: 1024-65535
 cis_krb5_key_file: /etc/audit/audit.key
 
-# 4.2.3
+# 4.2.1.1
+# 4.2.2.1
 # You should only enable either rsyslog or syslog-ng, but not both.
 cis_enable_rsyslog: true # Set to true if rsyslog should be enabled/configured.
 cis_enable_syslog_ng: false # Set to true if syslog_ng should be enabled/configured.
