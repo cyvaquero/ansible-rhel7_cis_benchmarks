@@ -393,5 +393,5 @@ cis_umask_shell_files:
 - /etc/bashrc
 - /etc/profile
 
-# 5.5
+# 5.6
 cis_wheel_group_members: "root"
