@@ -1,13 +1,13 @@
-# Standards: 1.1.36
+# Standards: 2.2.0
 ---
 
 - name: Restart sshd
-  service:
+  systemd:
     name: sshd
     state: restarted
 
 - name: Restart rsyslog
-  service:
+  systemd:
     name: rsyslog
     state: restarted
 
@@ -15,22 +15,22 @@
   command: "sysctl -w net.ipv4.route.flush=1"
 
 - name: Restart ntpd
-  service:
+  systemd:
     name: ntpd
     state: restarted
 
 - name: Restart chronyd
-  service:
+  systemd:
     name: chronyd
     state: restarted
 
 - name: Restart snmpd
-  service:
+  systemd:
     name: snmpd
     state: restarted
 
 - name: Restart auditd
-  service:
+  systemd:
     name: auditd
     state: reloaded
     use: service

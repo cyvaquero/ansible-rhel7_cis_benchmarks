@@ -1,7 +1,7 @@
-# Standards: 0.11
+# Standards: 2.2.0
 ---
 
-# 1.1.14 Ensure nodev option set on /home partition
+# 1.1.14 - Ensure nodev option set on /home partition
 
 - name: 1.1.14 - Ensure nodev option set on /home partition
   mount:

@@ -1,0 +1,15 @@
+# Standards: 2.2.0
+---
+
+# 1.2.5 Disable the rhnsd Daemon
+
+- name: 1.2.5 - Disable the rhnsd Daemon
+  service:
+    name: "rhnsd"
+    enabled: false
+    state: "{{ cis_rhnsd_state }}"
+  tags:
+    - level-2
+    - section-1
+    - "1.2.5"
+    - not-scored

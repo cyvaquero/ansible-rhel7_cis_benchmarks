@@ -11,8 +11,10 @@
     owner: root
     group: root
     backup: true
-  notify:
-    - Restart auditd
+# We will not restart auditd as part of the compliance remedition.
+# Hosts will be rebooted.
+#  notify:
+#    - Restart auditd
   tags:
     - level-2
     - section-4

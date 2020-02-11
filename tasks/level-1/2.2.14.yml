@@ -1,7 +1,7 @@
-# Standards: 1.1.24
+# Standards: 2.2.0
 ---
 
-# 2.2.14 Ensure SNMP services is not enabled
+# 2.2.14 Ensure SNMP Server is not enabled
 
 - name: 2.2.14 - Ensure SNMP services are {{ cis_snmp_install.state }} with exception {{ cis_snmp_install.exception }}
   yum:

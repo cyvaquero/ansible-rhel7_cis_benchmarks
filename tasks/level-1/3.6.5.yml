@@ -1,4 +1,4 @@
-# Standards: 0.11
+# Standards: 2.2.0
 ---
 
 # 3.6.5 Ensure firewall rules exist for all open ports
@@ -10,4 +10,4 @@
     - level-1
     - section-3
     - "3.6.5"
-    - not-scored
+    - scored

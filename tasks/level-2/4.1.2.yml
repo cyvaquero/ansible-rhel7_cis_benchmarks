@@ -1,4 +1,4 @@
-# Standards: 1.1.27
+# Standards: 2.2.0
 ---
 
 # 4.1.2 Ensure auditd Service is enabled
@@ -17,7 +17,7 @@
     - skip_ansible_lint
 
 - name: 4.1.2 - Ensure auditd Service is enabled
-  service:
+  systemd:
     name: "auditd"
     enabled: true
     state: started

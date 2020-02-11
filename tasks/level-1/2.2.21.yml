@@ -1,9 +1,9 @@
-# Standards: 0.11
+# Standards: 2.2.0
 ---
 
-# 2.1.10 Ensure rsync server is not enabled
+# 2.2.21 Ensure rsync service is not enabled
 
-- name: 2.1.10 - Ensure rsync server is {{ cis_rsync_install.state }}
+- name: 2.2.21 - Ensure rsync server is {{ cis_rsync_install.state }}
   yum:
     name: "{{ item.package }}"
     state: "{{ item.state }}"
@@ -12,10 +12,10 @@
   tags:
     - level-1
     - section-2
-    - "2.1.10"
+    - "2.2.21"
     - scored
 
-- name: 2.1.10 - If rsync server is installed set appropriate service - {{ cis_rsync_install.exception }}
+- name: 2.2.21 - If rsync server is installed set appropriate service - {{ cis_rsync_install.exception }}
   service:
     name: "{{ item.service }}"
     enabled: "{{ item.enabled }}"
@@ -26,6 +26,6 @@
   tags:
     - level-1
     - section-2
-    - "2.1.10"
+    - "2.2.21"
     - scored
 

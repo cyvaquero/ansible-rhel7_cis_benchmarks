@@ -1,25 +1,25 @@
-# Standards: 1.1.7
+# Standards: 2.2.0
 ---
 
-# 1.2.2 Ensure GPG keys are configured
+# 1.2.2 - Ensure gpgcheck is globally activated
 
-# The remediation actions for this recommendation are site-specific, therefore we test that
-# executing the specified rpm command results in no errors.
-- name: 1.2.2 - Ensure GPG keys are configured
-  shell: rpm -q gpg-pubkey --qf '%{name}-%{version}-%{release} --> %{summary}\n'
-  register: gpg_pubkey_check
-  changed_when: false
-  args:
-    warn: false
+- name: 1.2.2 - Verify that gpgcheck is enabled in /etc/yum.conf
+  lineinfile:
+    regexp: "^gpgcheck"
+    line: "gpgcheck=1"
+    dest: "/etc/yum.conf"
   tags:
     - level-1
     - "1.2.2"
     - scored
-    - skip_ansible_lint
 
-- name: 1.2.2 - Check GPG keys are configured
-  debug:
-    msg: RPM command output is {{ gpg_pubkey_check.stdout }}
+- name: 1.2.2 - Verify that gpgcheck is enabled for all repositories in /etc/yum.repos.d
+  replace:
+    regexp: "^gpgcheck=0"
+    replace: "gpgcheck=1"
+    dest: "{{ item }}"
+  with_fileglob:
+    - /etc/yum.repos.d/*.repo
   tags:
     - level-1
     - "1.2.2"

@@ -1,0 +1,18 @@
+# Standards: 2.2.0
+---
+
+# 1.1.11 - Ensure separate partition exists for /var/log
+
+- name: 1.1.11 - Ensure separate partition exists for /var/log
+  mount:
+    name: "{{ item.mount }}"
+    state: mounted
+    fstype: "{{ item.fstype }}"
+    src: "{{ item.device }}"
+  when: item.mount == '/var/log'
+  with_items: "{{ ansible_mounts }}"
+  tags:
+    - level-1
+    - section-1
+    - "1.1.11"
+    - scored

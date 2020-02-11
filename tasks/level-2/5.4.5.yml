@@ -1,0 +1,14 @@
+# Standards: 2.2.0
+---
+
+# 5.4.5 - Ensure default user shell timeout is 900 seconds or less
+
+- name: 5.4.5 - Ensure default user shell timeout is 900 seconds or less
+  debug:
+    msg: "WARNING - This check has not been implemented yet."
+  tags:
+    - level-2
+    - section-5
+    - "5.4.5"
+    - scored
+    - todo

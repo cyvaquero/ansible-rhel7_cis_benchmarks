@@ -3,7 +3,7 @@ HarryHarcourt.Ansible-RHEL7-CIS-Benchmarks
 
 All credit goes to anthcourtney for the original framework found here: https://github.com/anthcourtney/ansible-role-cis-amazon-linux
 
-This implementation has been converted to Red Hat Enterprise Linux 7.X (tested 7.0 - 7.5) and CentOS 7.4 (note CentOS version below 7.4 may have issues with SSH). 
+This implementation has been converted to Red Hat Enterprise Linux 7.X (tested 7.0 - 7.5) and CentOS 7.4 (note CentOS version below 7.4 may have issues with SSH).
 
 This implementation has been made idempotent in many places, and continues to be
 
@@ -46,7 +46,7 @@ An example playbook which uses this role is as follows:
   become: yes
 
   roles:
-    - Ansible-RHEL7-CIS-Benchmarks 
+    - Ansible-RHEL7-CIS-Benchmarks
 ```
 
 A more advanced example, which includes modifications to the default values used, as well as the exclusion of some items in the benchmark which are considered unnecessary for a fictional environment, is as follows:
@@ -64,10 +64,10 @@ A more advanced example, which includes modifications to the default values used
       - 5.4.4
       - 3.4.2
       - 3.4.3
-      - 6.2.13   
+      - 6.2.13
     cis_pass_max_days: 45
     cis_umask_default: 002
- 
+
   roles:
     - Ansible-RHEL7-CIS-Benchmarks
 
@@ -112,10 +112,13 @@ ansible-playbook playbook.yml -t scored
 Limitations
 -----------
 
-At present, only the Level 1 items of the benchmark are implemented. Level 2 items will be added as time permits.
+At present, only the Level 1 items of the benchmark are implemented. Level 2 items are added as time permits.
 
 The following checks have not been implemented:
-
+* 1.2.4. RHN/Subscription Manager is environment specific.
+* 1.1.18. Removable devices are environment specific.
+* 1.1.19. Removable devices are environment specific.
+* 1.1.20. Removable devices are environment specific.
 * 3.6.2. Firewall rulesets are environment specific.
 * 3.6.3. Firewall rulesets are environment specific.
 * 3.6.4. Firewall rulesets are environment specific.
@@ -159,7 +162,7 @@ License
 
 NOTE: There has been some confusion of the license that should be used for this Ansible Role, the base source of this Role from Anthony Courtney did not have a License file, however the meta/main.yml referenced MIT but the README (below) referenced BSD.  With no feedback from Anthony (through logging an issue against the original source and contacting Anthony through LinkedIn) I have decided to adopt the MIT License for this Role.
 
-MIT. 
+MIT.
 
 Author Information
 ------------------

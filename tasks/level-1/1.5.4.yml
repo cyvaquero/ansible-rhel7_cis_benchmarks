@@ -1,7 +1,7 @@
-# Standards: 1.1.9
+# Standards: 2.2.0
 ---
 
-# 1.5.4 Ensure prelink is disabled
+# 1.5.4 - Ensure prelink is disabled
 
 - name: 1.5.4 - Check if prelink binary exists
   yum:

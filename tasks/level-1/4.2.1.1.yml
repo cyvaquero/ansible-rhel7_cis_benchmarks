@@ -1,4 +1,4 @@
-# Standards: 1.1.5
+# Standards: 2.2.0
 ---
 
 # 4.2.1.1 Ensure rsyslog Service is enabled
@@ -17,7 +17,7 @@
     - skip_ansible_lint
 
 - name: 4.2.1.1 - Ensure rsyslog Service is enabled
-  service:
+  systemd:
     name: "rsyslog"
     enabled: true
     state: started
