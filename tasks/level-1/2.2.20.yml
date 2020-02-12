@@ -33,6 +33,7 @@
   yum:
     name: "{{ item.client }}"
     state: "{{ item.client_state }}"
+  when: cis_tftp_install.client_state == 'present'
   with_items:
     - "{{ cis_tftp_install }}"
   tags:

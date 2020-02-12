@@ -191,6 +191,9 @@ cis_talkd_install: { package: talk-server, state: absent, exception: 123, servic
 # 2.2.19
 cis_telnet_install: { package: telnet-server, state: absent, exception: 123, service: telnet.socket, enabled: no, rstate: started, client: telnet, client_state: present }
 
+# 2.2.20
+#    See 2.1.6
+
 # 2.2.21
 cis_rsync_install: { package: rsync, state: absent, exception: 123, service: rsyncd, enabled: no, rstate: started }
 
